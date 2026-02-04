@@ -40,6 +40,6 @@ jobs:
           project-name: mine-test-bd
           project-version: 0.0.2
           detect-cli-params:
-                 --detect.tools=CONTAINER_SCAN
+                 --detect.tools=SIGNATURE_SCAN
                  --detect.container.scan.file.path=./vulnerable-python.tar
           
