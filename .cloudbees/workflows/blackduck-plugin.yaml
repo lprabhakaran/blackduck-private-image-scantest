@@ -16,7 +16,7 @@ jobs:
           repository: cbp-trivy-explicit-scan/trivy-debian-c-publicimage-scan
 
       - name: Print Checkout Location
-        uses: cloudbees-io/checkout@v1
+        uses: docker://alpine/git:v2.49.1
         run: |
           echo "The repository was checked out to:"
           echo "$PWD"
