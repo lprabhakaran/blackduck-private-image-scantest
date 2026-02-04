@@ -43,4 +43,4 @@ jobs:
           project-version: 0.0.1
           detect-cli-params:
                  --detect.tools=SIGNATURE_SCAN
-                 --detect.source.path=./vulnerable-python.tar
+                 --detect.source.path=/cloudbees/workspace/vulnerable-python.tar
