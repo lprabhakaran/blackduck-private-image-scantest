@@ -12,8 +12,7 @@ jobs:
     steps:
       - name: checkout Source Code
         uses: cloudbees-io/checkout@v1
-        with:
-          repository: cbp-trivy-explicit-scan/trivy-debian-c-publicimage-scan
+       
 
       - name: Print Checkout Location
         uses: docker://alpine/git:v2.49.1
@@ -42,5 +41,5 @@ jobs:
           project-version: 0.0.2
           detect-cli-params:
                  --detect.tools=CONTAINER_SCAN
-                 --detect.container.scan.file.path=./debian.tar
+                 --detect.container.scan.file.path=./vulnerable-python.tar
           
