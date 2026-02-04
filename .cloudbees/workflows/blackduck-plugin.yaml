@@ -22,6 +22,15 @@ jobs:
           echo "$PWD"
           echo "Listing contents:"
           ls -la
+      
+      - name: Check if debian.tar exists
+        uses: docker://alpine/git:v2.49.1
+        run: |
+          if [ -f /cloudbees/workspace/debian.tar ]; then
+          echo "debian.tar is present"
+          else
+          echo "debian.tar is NOT present"
+          fi
 
       - name: black duck hybrid plugin scan
         uses: cloudbees-io/blackduck-sca-scan-dependency@v2
@@ -32,5 +41,5 @@ jobs:
           project-name: mine-test-bd
           project-version: 0.0.2
           detect-cli-params:
-                 --detect.container.scan.file.path=./debian.tar
+                 --detect.container.scan.file.path=/cloudbees/workspace/debian.tar
           
