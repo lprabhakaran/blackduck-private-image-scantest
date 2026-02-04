@@ -24,5 +24,5 @@ jobs:
           project-version: 0.0.2
           detect-cli-params:
                  --detect.tools=CONTAINER_SCAN
-                 --detect.container.scan.file.path=${{ github.workspace }}/debian.tar
+                 --detect.container.scan.file.path=./debian.tar
           
