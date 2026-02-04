@@ -42,4 +42,5 @@ jobs:
           detect-cli-params:
                  --detect.tools=SIGNATURE_SCAN
                  --detect.source.path=./vulnerable-python.tar
+                 --detect.debug=true
           
