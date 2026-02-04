@@ -38,6 +38,6 @@ jobs:
           server-url: https://blackduck.saas-preprod.beescloud.com
           api-token: ${{ secrets.BD_API_TOKEN }}
           project-name: mine-test-bd
-          project-version: 0.0.2
+          project-version: 0.0.3
           detect-cli-params:
                  --detect.tools=SIGNATURE_SCAN
