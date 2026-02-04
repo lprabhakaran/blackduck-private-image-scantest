@@ -14,6 +14,15 @@ jobs:
         uses: cloudbees-io/checkout@v1
         with:
           repository: cbp-trivy-explicit-scan/trivy-debian-c-publicimage-scan
+
+      - name: Print Checkout Location
+        uses: cloudbees-io/checkout@v1
+        run: |
+          echo "The repository was checked out to:"
+          echo "$PWD"
+          echo "Listing contents:"
+          ls -la
+
       - name: black duck hybrid plugin scan
         uses: cloudbees-io/blackduck-sca-scan-dependency@v2
         with:
