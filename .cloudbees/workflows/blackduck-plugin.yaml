@@ -25,7 +25,7 @@ jobs:
       - name: Check if debian.tar exists
         uses: docker://alpine/git:v2.49.1
         run: |
-          if [ -f /cloudbees/workspace/debian.tar ]; then
+          if [ -f /cloudbees/workspace/vulnerable-python.tar ]; then
           echo "debian.tar is present"
           else
           echo "debian.tar is NOT present"
